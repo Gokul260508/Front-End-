@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PulseAI Studio - Next-Generation Spatial Intelligence & Creative AI Canvas. Empower your team with real-time generative workflows, 3D spatial node graphs, and autonomous asset pipelines.">
+  <meta name="keywords" content="responsive landing page, AI studio, creative intelligence, spatial canvas, frontend development, HTML5, CSS3, JavaScript">
+  <meta name="author" content="Frontend Development Team">
+  <meta name="theme-color" content="#0F172A">
+
+  <title>PulseAI Studio — Next-Gen Spatial Intelligence & Creative AI Canvas</title>
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ========================================================
+       TOP SCROLL PROGRESS INDICATOR
+       Tracks user reading position down the document.
+       ======================================================== -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- ========================================================
+       HEADER & NAVIGATION SECTION
+       Sticky glassmorphic navbar with logo, desktop links,
+       theme toggle, primary CTA, and accessible mobile burger.
+       ======================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="PulseAI Studio Homepage">
+        <img src="assets/images/logo.svg" alt="PulseAI Logo" class="logo-image" width="160" height="40">
+        <span class="version-tag">v2.5</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#workflow" class="nav-link">Workflow</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle (Dark / Light Mode) -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light or dark color theme" title="Toggle Theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Action Buttons -->
+        <a href="#pricing" class="btn btn-ghost hide-mobile">Sign In</a>
+        <a href="#cta" class="btn btn-primary hide-mobile">Start Free Trial</a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MOBILE NAVIGATION SLIDE-OVER DRAWER
+       Slide-out accessible mobile menu with overlay backdrop.
+       ======================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="#hero" class="brand-logo drawer-logo">
+        <img src="assets/images/logo.svg" alt="PulseAI Logo" width="140" height="36">
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+        &times;
+      </button>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#features" class="mobile-nav-link">Features</a></li>
+        <li><a href="#workflow" class="mobile-nav-link">Workflow</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="#pricing" class="btn btn-secondary btn-full">Sign In</a>
+      <a href="#cta" class="btn btn-primary btn-full">Start Free Trial</a>
+    </div>
+
+    <div class="drawer-footer">
+      <p class="drawer-caption">PulseAI Studio &copy; 2026. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       MAIN PAGE CONTENT
+       Semantic HTML5 main landmark encompassing all sections.
+       ======================================================== -->
+  <main id="mainContent">
+
+    <!-- ========================================================
+         HERO SECTION
+         High-impact value proposition, CTA buttons, social proof,
+         and interactive spatial canvas preview card.
+         ======================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        
+        <!-- Left: Hero Text & Value Proposition -->
+        <div class="hero-content">
+          <!-- Announcement Pill Badge -->
+          <div class="hero-badge animate-fade-in">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Introducing PulseAI 2.5 • Spatial Engine Live</span>
+            <svg class="badge-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+
+          <!-- Main Hero Headline -->
+          <h1 class="hero-title animate-fade-in">
+            Unleash Intelligent Creativity with <span class="gradient-text">Next-Gen Spatial</span> Workflows
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-subtitle animate-fade-in">
+            Empower your team with lightning-fast generative intelligence, collaborative 3D canvases, and autonomous asset pipelines—all unified in one frictionless workspace.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group animate-fade-in">
+            <a href="#cta" class="btn btn-primary btn-lg">
+              <span>Start Free 14-Day Trial</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <button type="button" class="btn btn-secondary btn-lg" id="openDemoModalBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Watch Interactive Demo</span>
+            </button>
+          </div>
+
+          <!-- Social Proof & Customer Validation -->
+          <div class="hero-social-proof animate-fade-in">
+            <div class="avatar-stack" aria-hidden="true">
+              <img src="assets/images/avatar-1.svg" alt="User Avatar" width="36" height="36" class="avatar-img">
+              <img src="assets/images/avatar-2.svg" alt="User Avatar" width="36" height="36" class="avatar-img">
+              <img src="assets/images/avatar-3.svg" alt="User Avatar" width="36" height="36" class="avatar-img">
+            </div>
+            <div class="proof-meta">
+              <div class="star-rating" aria-label="Rated 4.9 out of 5 stars">
+                ★★★★★ <span class="rating-num">4.9 / 5</span>
+              </div>
+              <p class="proof-caption">Loved by <strong>50,000+</strong> creative developers and design teams</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Hero Visual & Spatial Preview Card -->
+        <div class="hero-visual animate-fade-in">
+          <div class="interactive-preview-card" id="heroInteractiveCard">
+            <!-- Simulated Studio Header -->
+            <div class="preview-header">
+              <div class="preview-window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="preview-title-bar">Spatial Canvas — Studio Workspace</span>
+              <span class="preview-badge-status">● Real-time</span>
+            </div>
+
+            <!-- Preview Graphic Area -->
+            <div class="preview-canvas-wrapper">
+              <img src="assets/images/hero-illustration.svg" alt="PulseAI Spatial Neural Canvas Illustration" class="preview-graphic" width="600" height="420" loading="eager">
+              
+              <!-- Floating Interactive Micro-Widget -->
+              <div class="floating-widget prompt-widget">
+                <div class="widget-icon">⚡</div>
+                <div class="widget-text">
+                  <span class="widget-label">Autonomous Inference</span>
+                  <strong class="widget-value">32ms Latency (4K Diffusion)</strong>
+                </div>
+              </div>
+
+              <div class="floating-widget sync-widget">
+                <div class="widget-icon">🌐</div>
+                <div class="widget-text">
+                  <span class="widget-label">Global Edge Mesh</span>
+                  <strong class="widget-value">Active Sync: 34 Regions</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Prompt Playground Tester -->
+            <div class="preview-interactive-bar">
+              <label for="heroPromptInput" class="sr-only">Test Generative Prompt</label>
+              <input type="text" id="heroPromptInput" class="hero-prompt-field" value="Cyberpunk architectural glasshouse with bioluminescent fauna" placeholder="Type a creative prompt...">
+              <button type="button" class="btn btn-primary btn-sm" id="heroPromptGenerateBtn">
+                <span>Generate</span>
+                <span class="sparkle-icon">✨</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PARTNER & TRUST MARQUEE
+         Infinite horizontal logo ticker for social proof.
+         ======================================================== -->
+    <section class="partner-marquee-section" aria-label="Trusted Industry Partners">
+      <div class="container marquee-heading-container">
+        <p class="marquee-label">Powering next-generation pipelines at top-tier digital organizations</p>
+      </div>
+      <div class="marquee-track-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+          <!-- Track Items (Duplicated for seamless infinite CSS loop) -->
+          <div class="marquee-item"><img src="assets/images/partner-1.svg" alt="Vertex Partner" width="140" height="36"></div>
+          <div class="marquee-item"><img src="assets/images/partner-2.svg" alt="Hyperion Partner" width="140" height="36"></div>
+          <div class="marquee-item"><img src="assets/images/partner-3.svg" alt="Solaria Partner" width="140" height="36"></div>
+          <div class="marquee-item"><img src="assets/images/partner-4.svg" alt="Nexus AI Partner" width="140" height="36"></div>
+          <div class="marquee-item"><img src="assets/images/partner-5.svg" alt="Quantum Partner" width="140" height="36"></div>
+          
+          <!-- Duplicate group for loop -->
+          <div class="marquee-item" aria-hidden="true"><img src="assets/images/partner-1.svg" alt="" width="140" height="36"></div>
+          <div class="marquee-item" aria-hidden="true"><img src="assets/images/partner-2.svg" alt="" width="140" height="36"></div>
+          <div class="marquee-item" aria-hidden="true"><img src="assets/images/partner-3.svg" alt="" width="140" height="36"></div>
+          <div class="marquee-item" aria-hidden="true"><img src="assets/images/partner-4.svg" alt="" width="140" height="36"></div>
+          <div class="marquee-item" aria-hidden="true"><img src="assets/images/partner-5.svg" alt="" width="140" height="36"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FEATURE HIGHLIGHTS SECTION
+         Comprehensive responsive grid of 6 feature cards with
+         icons, hover effects, gradient borders, and descriptive copy.
+         ======================================================== -->
+    <section class="features-section section-padding" id="features">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">Powerful Capabilities</span>
+          <h2 class="section-title">Engineered for Velocity. Designed for Scale.</h2>
+          <p class="section-subtitle">
+            Every feature in PulseAI Studio is architected from the ground up to eliminate friction and turn ambitious creative concepts into production reality.
+          </p>
+        </div>
+
+        <!-- Features Grid (6 Cards) -->
+        <div class="features-grid">
+
+          <!-- Feature Card 1 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <div class="card-badge">Neural Co-pilot</div>
+            <h3 class="card-title">Real-Time Prompt Synthesis</h3>
+            <p class="card-desc">
+              Context-aware neural assistants autocomplete prompts, synthesize multi-angle concept variations, and maintain consistent brand styling across entire collections.
+            </p>
+            <ul class="card-list">
+              <li>Low-latency diffusion generation</li>
+              <li>Multi-modal text, sketch, and audio inputs</li>
+              <li>Deterministic seed repeatability</li>
+            </ul>
+          </article>
+
+          <!-- Feature Card 2 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="card-badge">Spatial Engine</div>
+            <h3 class="card-title">Infinite 3D Spatial Canvas</h3>
+            <p class="card-desc">
+              Break free from rigid 2D viewports. Assemble, compose, and inspect your assets within a non-destructive infinite 3D node canvas with seamless multi-user collaboration.
+            </p>
+            <ul class="card-list">
+              <li>Hardware-accelerated WebGL viewport</li>
+              <li>Hierarchical node nesting</li>
+              <li>Multi-camera viewport switching</li>
+            </ul>
+          </article>
+
+          <!-- Feature Card 3 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="card-badge">Asset Ops</div>
+            <h3 class="card-title">Autonomous Asset Pipeline</h3>
+            <p class="card-desc">
+              Automatically render, transcode, compress, and publish production-ready assets directly to global CDNs in WebP, AVIF, GLTF, and USDZ formats with zero manual work.
+            </p>
+            <ul class="card-list">
+              <li>Automated LOD (Level-of-Detail) generation</li>
+              <li>High-fidelity PBR texture baking</li>
+              <li>Edge CDN distribution in seconds</li>
+            </ul>
+          </article>
+
+          <!-- Feature Card 4 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="card-badge">Security</div>
+            <h3 class="card-title">Zero-Retention Security Vault</h3>
+            <p class="card-desc">
+              Your proprietary training weights, confidential brand designs, and intellectual property remain 100% private. We guarantee zero training on customer creations.
+            </p>
+            <ul class="card-list">
+              <li>SOC2 Type II & ISO 27001 certified</li>
+              <li>Granular role-based access control (RBAC)</li>
+              <li>End-to-end encryption at rest and in transit</li>
+            </ul>
+          </article>
+
+          <!-- Feature Card 5 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <div class="card-badge">Ecosystem</div>
+            <h3 class="card-title">Deep Creative Integrations</h3>
+            <p class="card-desc">
+              Connect PulseAI directly into your current tech stack with official bi-directional plugins for Figma, Blender, Unreal Engine, Slack, and GitHub workflows.
+            </p>
+            <ul class="card-list">
+              <li>Bi-directional live vector synchronization</li>
+              <li>Webhook triggers & CI/CD automations</li>
+              <li>Robust REST & GraphQL APIs</li>
+            </ul>
+          </article>
+
+          <!-- Feature Card 6 -->
+          <article class="feature-card reveal-on-scroll" tabindex="0">
+            <div class="card-icon-box gradient-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <div class="card-badge">Global Mesh</div>
+            <h3 class="card-title">Distributed Edge State Sync</h3>
+            <p class="card-desc">
+              Experience seamless, instant collaboration. Powered by operational transformation and CRDT algorithms, your team can co-create from Tokyo to New York with zero lag.
+            </p>
+            <ul class="card-list">
+              <li>Sub-50ms peer-to-peer sync</li>
+              <li>Full offline support with auto-reconcile</li>
+              <li>Complete branch & version histories</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         INTERACTIVE WORKFLOW SHOWCASE
+         Interactive tabbed interface demonstrating 3 distinct
+         workflows: Generative AI, Spatial Canvas, and Team Sync.
+         ======================================================== -->
+    <section class="workflow-section section-padding" id="workflow">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">Interactive Demo</span>
+          <h2 class="section-title">See PulseAI in Action</h2>
+          <p class="section-subtitle">
+            Explore how PulseAI Studio transforms design and engineering workflows through interactive visual exploration.
+          </p>
+        </div>
+
+        <!-- Interactive Tabs Navigation -->
+        <div class="workflow-tabs-container reveal-on-scroll" role="tablist" aria-label="Workflow Demos">
+          <button type="button" class="tab-btn active" role="tab" id="tabGenerative" aria-selected="true" aria-controls="panelGenerative" data-tab="generative">
+            <span class="tab-icon">✨</span>
+            <span class="tab-text">Generative Diffusion</span>
+          </button>
+          <button type="button" class="tab-btn" role="tab" id="tabSpatial" aria-selected="false" aria-controls="panelSpatial" data-tab="spatial">
+            <span class="tab-icon">📐</span>
+            <span class="tab-text">Spatial 3D Studio</span>
+          </button>
+          <button type="button" class="tab-btn" role="tab" id="tabCollaboration" aria-selected="false" aria-controls="panelCollaboration" data-tab="collab">
+            <span class="tab-icon">👥</span>
+            <span class="tab-text">Team Live Sync</span>
+          </button>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="workflow-panels-wrapper reveal-on-scroll">
+
+          <!-- Panel 1: Generative Diffusion -->
+          <div class="tab-panel active" id="panelGenerative" role="tabpanel" aria-labelledby="tabGenerative">
+            <div class="panel-grid">
+              <div class="panel-info">
+                <span class="panel-pill">Workflow Mode: Diffusion 2.5</span>
+                <h3 class="panel-heading">Prompt to Production in Milliseconds</h3>
+                <p class="panel-text">
+                  Harness multimodal models optimized for spatial depth, lighting consistency, and vector layer separation. Generate production-ready assets with full seed control.
+                </p>
+                <div class="panel-features-list">
+                  <div class="panel-feature-item">
+                    <strong>High Dynamic Range:</strong> 32-bit floating point color rendering.
+                  </div>
+                  <div class="panel-feature-item">
+                    <strong>Negative Prompt Filter:</strong> Eliminate artifacts automatically.
+                  </div>
+                </div>
+                <div class="panel-action">
+                  <button type="button" class="btn btn-primary" id="tryGenerativeBtn">Run Simulation</button>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="code-simulation-card">
+                  <div class="sim-header">
+                    <span class="sim-dot"></span>
+                    <span class="sim-file">neural-prompt-config.json</span>
+                  </div>
+                  <pre class="sim-code"><code>{
+  "model": "PulseAI-Diffusion-v2.5",
+  "resolution": "3840x2160",
+  "render_engine": "Spatial-Neural-PBR",
+  "steps": 45,
+  "guidance_scale": 7.5,
+  "output_formats": ["png", "webp", "gltf"],
+  "edge_delivery": true,
+  "status": "<span class="code-highlight">SYNTHESIS_READY</span>"
+}</code></pre>
+                  <div class="sim-status-bar">
+                    <span>⚡ GPU Cluster: US-East-1 (A100 Tensor)</span>
+                    <span class="badge-success">Ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Spatial 3D Studio -->
+          <div class="tab-panel" id="panelSpatial" role="tabpanel" aria-labelledby="tabSpatial" hidden>
+            <div class="panel-grid">
+              <div class="panel-info">
+                <span class="panel-pill">Workflow Mode: WebGL 3D</span>
+                <h3 class="panel-heading">Infinite Infinite Multi-Node Canvas</h3>
+                <p class="panel-text">
+                  Arrange creative nodes in full spatial 3D. Inspect wireframes, material textures, and lighting rigs with instant hardware-accelerated interactive manipulation.
+                </p>
+                <div class="panel-features-list">
+                  <div class="panel-feature-item">
+                    <strong>Zero Install:</strong> Runs at 60 FPS directly in Chrome, Firefox, Safari & Edge.
+                  </div>
+                  <div class="panel-feature-item">
+                    <strong>Node Shaders:</strong> Visual node-based shader graph editing.
+                  </div>
+                </div>
+                <div class="panel-action">
+                  <button type="button" class="btn btn-primary">Launch 3D Canvas</button>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="spatial-wireframe-card">
+                  <div class="spatial-cube-wrapper">
+                    <div class="spatial-cube">
+                      <div class="cube-face front">PulseAI</div>
+                      <div class="cube-face back">3D Mesh</div>
+                      <div class="cube-face right">PBR PBR</div>
+                      <div class="cube-face left">USDZ</div>
+                      <div class="cube-face top">Spatial</div>
+                      <div class="cube-face bottom">Sync</div>
+                    </div>
+                  </div>
+                  <p class="spatial-caption">Interactive 3D Canvas Component Simulation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Team Collaboration -->
+          <div class="tab-panel" id="panelCollaboration" role="tabpanel" aria-labelledby="tabCollaboration" hidden>
+            <div class="panel-grid">
+              <div class="panel-info">
+                <span class="panel-pill">Workflow Mode: CRDT Mesh</span>
+                <h3 class="panel-heading">Real-Time Multiplayer Engineering</h3>
+                <p class="panel-text">
+                  Multiple designers and engineers work concurrently on the same spatial project. View team member cursors, annotate canvas regions, and merge changes conflict-free.
+                </p>
+                <div class="panel-features-list">
+                  <div class="panel-feature-item">
+                    <strong>Live Presence:</strong> Multi-cursor indicators with user identities.
+                  </div>
+                  <div class="panel-feature-item">
+                    <strong>Granular History:</strong> Revert to any state in time with time-travel snapshots.
+                  </div>
+                </div>
+                <div class="panel-action">
+                  <button type="button" class="btn btn-primary">Simulate Multi-User Session</button>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="collab-simulation-card">
+                  <div class="collab-user-tag user-1">
+                    <span class="user-dot"></span> Alex (Lead 3D) — Editing Material Node
+                  </div>
+                  <div class="collab-user-tag user-2">
+                    <span class="user-dot"></span> Sarah (Creative Dir) — Approving Camera 2
+                  </div>
+                  <div class="collab-user-tag user-3">
+                    <span class="user-dot"></span> Kenji (DevOps) — Syncing CDN Endpoint
+                  </div>
+                  <div class="sim-live-mesh">
+                    <div class="mesh-node active">Node #104 (CRDT Synced)</div>
+                    <div class="mesh-node active">Node #105 (CRDT Synced)</div>
+                    <div class="mesh-node active">Node #106 (CRDT Synced)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         METRICS & LIVE STATS SECTION
+         Numeric indicators animated via JavaScript Intersection Observer.
+         ======================================================== -->
+    <section class="stats-section" aria-label="Platform Statistics and Performance">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-number" data-target="120" data-suffix="M+">0</div>
+            <div class="stat-label">Generated 3D Assets</div>
+            <div class="stat-sub">Across 140 countries</div>
+          </div>
+
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-number" data-target="45" data-suffix="ms" data-prefix="< ">0</div>
+            <div class="stat-label">Global Edge Latency</div>
+            <div class="stat-sub">Sub-second synthesis</div>
+          </div>
+
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-number" data-target="50" data-suffix="K+">0</div>
+            <div class="stat-label">Active Studio Creators</div>
+            <div class="stat-sub">From indie artists to enterprises</div>
+          </div>
+
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-number" data-target="99.99" data-suffix="%" data-decimals="2">0</div>
+            <div class="stat-label">Platform Uptime</div>
+            <div class="stat-sub">Backed by enterprise SLA</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ABOUT SECTION
+         Narrative storytelling, architectural diagram, and core values.
+         ======================================================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Left: About Narrative -->
+          <div class="about-content reveal-on-scroll">
+            <span class="section-tag">About PulseAI</span>
+            <h2 class="section-title">Reimagining How Modern Teams Visualize and Build the Future</h2>
+            <p class="about-lead">
+              Founded by pioneers in spatial computing and neural graphics, PulseAI Studio was born out of frustration with sluggish, fragmented creative pipelines.
+            </p>
+            <p class="about-body">
+              We believe creativity should be synchronous, frictionless, and fluid. By merging cutting-edge diffusion synthesis with decentralized state management, we provide a unified canvas where artists, designers, and software engineers ideate, prototype, and ship at the speed of thought.
+            </p>
+
+            <!-- Value Pillars -->
+            <div class="value-pillars">
+              <div class="pillar-item">
+                <div class="pillar-check">✓</div>
+                <div>
+                  <h4 class="pillar-title">Open & Extensible Architecture</h4>
+                  <p class="pillar-desc">Built with web-first protocols and open standard formats (GLTF, USDZ, WebAssembly).</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-check">✓</div>
+                <div>
+                  <h4 class="pillar-title">Privacy-First Data Ownership</h4>
+                  <p class="pillar-desc">Your intellectual property is sacred. We never train public foundation models on your creations.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-check">✓</div>
+                <div>
+                  <h4 class="pillar-title">Eco-Efficient Compute</h4>
+                  <p class="pillar-desc">Intelligent cluster routing cuts carbon emissions by 42% compared to standard GPU compute farms.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="#pricing" class="btn btn-secondary">Read Our Whitepaper</a>
+            </div>
+          </div>
+
+          <!-- Right: Architecture Graphic -->
+          <div class="about-visual reveal-on-scroll">
+            <div class="about-visual-card">
+              <img src="assets/images/about-illustration.svg" alt="PulseAI Studio Architectural Diagram" class="about-image" width="540" height="420" loading="lazy">
+              <div class="about-floating-badge">
+                <span class="badge-icon">🛡️</span>
+                <div>
+                  <strong>SOC2 Type II Certified</strong>
+                  <p>Enterprise data isolation guaranteed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TESTIMONIALS & SOCIAL PROOF SECTION
+         Cards with verified customer quotes, ratings, and avatars.
+         ======================================================== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Endorsed by Visionary Creators</h2>
+          <p class="section-subtitle">
+            See how forward-thinking studios and teams accelerate their asset workflows with PulseAI.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "PulseAI reduced our 3D asset iteration cycle from 4 days to 45 minutes. The infinite spatial canvas is hands down the most intuitive design surface we have ever used."
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/avatar-1.svg" alt="Elena Rostova" width="48" height="48" class="author-avatar">
+              <div class="author-meta">
+                <h4 class="author-name">Elena Rostova</h4>
+                <p class="author-title">VP of Product Design, Hyperion Interactive</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "The ability to switch between generative prompt synthesis and full 3D spatial node inspection without leaving the browser is revolutionary. Our team cannot live without it."
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/avatar-2.svg" alt="Marcus Thorne" width="48" height="48" class="author-avatar">
+              <div class="author-meta">
+                <h4 class="author-name">Marcus Thorne</h4>
+                <p class="author-title">Principal Creative Technologist, Solaria Labs</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "As a distributed team across 6 time zones, the sub-50ms CRDT sync keeps our team completely aligned. We shipped our new spatial showroom 3 weeks ahead of schedule."
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/avatar-3.svg" alt="Devon Vance" width="48" height="48" class="author-avatar">
+              <div class="author-meta">
+                <h4 class="author-name">Devon Vance</h4>
+                <p class="author-title">Lead Frontend Architect, Nexus Studio</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PRICING & PLANS SECTION
+         Interactive monthly/yearly billing switch and 3 tier cards.
+         ======================================================== -->
+    <section class="pricing-section section-padding" id="pricing">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">Flexible Pricing</span>
+          <h2 class="section-title">Transparent Plans Built for Every Stage</h2>
+          <p class="section-subtitle">
+            Start free with core capabilities, then upgrade as your team's creative compute demands expand.
+          </p>
+
+          <!-- Billing Interval Switcher -->
+          <div class="pricing-switch-wrapper">
+            <span class="switch-label" id="monthlyLabel">Monthly</span>
+            <button type="button" class="billing-toggle-btn" id="billingToggle" role="switch" aria-checked="false" aria-label="Switch between monthly and annual billing">
+              <span class="toggle-slider"></span>
+            </button>
+            <span class="switch-label" id="annualLabel">
+              Annually <span class="discount-pill">Save 20%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid">
+
+          <!-- Plan 1: Starter -->
+          <div class="pricing-card reveal-on-scroll">
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Starter</h3>
+              <p class="plan-desc">For individual creators and hobbyists exploring spatial generative AI.</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="0" data-annual="0">0</span>
+                <span class="billing-cycle">/ forever</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ 50 High-res generative renders / mo</li>
+              <li>✓ 1 Active 3D spatial canvas</li>
+              <li>✓ Standard WebP and PNG export</li>
+              <li>✓ Community Discord support</li>
+              <li class="disabled">✕ Multiplayer live sync</li>
+              <li class="disabled">✕ Custom API keys</li>
+            </ul>
+            <a href="#cta" class="btn btn-secondary btn-full">Get Started Free</a>
+          </div>
+
+          <!-- Plan 2: Professional (Featured) -->
+          <div class="pricing-card featured reveal-on-scroll">
+            <div class="featured-badge">MOST POPULAR</div>
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Professional</h3>
+              <p class="plan-desc">For professional artists, studios, and fast-moving product teams.</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="29" data-annual="24">29</span>
+                <span class="billing-cycle">/ seat / mo</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Unlimited 4K spatial synthesis</li>
+              <li>✓ Infinite 3D canvas boards</li>
+              <li>✓ GLTF, USDZ, FBX & WebP exports</li>
+              <li>✓ Real-time multi-user collaboration</li>
+              <li>✓ Priority GPU cluster routing</li>
+              <li>✓ Standard REST API access</li>
+            </ul>
+            <a href="#cta" class="btn btn-primary btn-full">Start 14-Day Free Trial</a>
+          </div>
+
+          <!-- Plan 3: Enterprise -->
+          <div class="pricing-card reveal-on-scroll">
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Enterprise</h3>
+              <p class="plan-desc">For large organizations requiring bespoke SLA, security, and dedicated compute.</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="99" data-annual="79">99</span>
+                <span class="billing-cycle">/ seat / mo</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Dedicated private GPU cluster</li>
+              <li>✓ Custom fine-tuned foundation models</li>
+              <li>✓ SSO, SAML & Granular RBAC</li>
+              <li>✓ Zero data retention guarantee</li>
+              <li>✓ 99.99% Uptime SLA with 24/7 support</li>
+              <li>✓ Unlimited seats & API rate limits</li>
+            </ul>
+            <a href="#cta" class="btn btn-secondary btn-full">Contact Enterprise Team</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FAQ ACCORDION SECTION
+         Frequently Asked Questions with accessible click toggling.
+         ======================================================== -->
+    <section class="faq-section section-padding" id="faq">
+      <div class="container max-w-narrow">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about PulseAI Studio, billing, security, and workflows.
+          </p>
+        </div>
+
+        <div class="accordion-list">
+          
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item reveal-on-scroll">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span class="accordion-title">How does PulseAI Studio differ from conventional 2D AI generators?</span>
+              <span class="accordion-chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-1" hidden>
+              <p>
+                Unlike standard 2D image generators that produce flat raster pixels, PulseAI builds a full volumetric spatial graph. You can inspect wireframes, adjust camera angles, export 3D formats (GLTF/USDZ), and manipulate assets within an infinite real-time 3D canvas with multiple team members.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item reveal-on-scroll">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span class="accordion-title">Do I need to install heavy desktop software or GPU drivers?</span>
+              <span class="accordion-chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-2" hidden>
+              <p>
+                No installation is required. PulseAI Studio runs completely in any modern web browser (Chrome, Edge, Firefox, Safari) using WebGL and WebAssembly. All heavy model inferencing and GPU rendering take place on our high-performance distributed cloud clusters.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item reveal-on-scroll">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span class="accordion-title">Who owns the intellectual property and copyright of generated assets?</span>
+              <span class="accordion-chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-3" hidden>
+              <p>
+                You retain 100% full commercial ownership of all inputs, prompts, outputs, and derivative 3D assets created with PulseAI Studio. We do not claim any copyright, and we never use your private data to train public foundation models.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item reveal-on-scroll">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <span class="accordion-title">Can I cancel my subscription or change plans at any time?</span>
+              <span class="accordion-chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-4" hidden>
+              <p>
+                Yes. You can switch between Monthly and Annual billing or cancel your subscription at any time with a single click inside your account settings. There are no cancellation penalties or hidden lock-in periods.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 5 -->
+          <div class="accordion-item reveal-on-scroll">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <span class="accordion-title">Does PulseAI integrate with Figma, Blender, and Unreal Engine?</span>
+              <span class="accordion-chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-5" hidden>
+              <p>
+                Yes! We offer official open-source plugins for Figma, Blender, and Unreal Engine 5. You can stream generated 3D meshes, procedural shaders, and vector masks directly into your production pipelines with one click.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CALL TO ACTION (CTA) SECTION
+         High-conversion banner with ambient lighting, supporting
+         copy, and functional early-access newsletter subscription form.
+         ======================================================== -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <div class="cta-ambient" aria-hidden="true"></div>
+
+          <div class="cta-content">
+            <span class="section-tag cta-tag">Get Started Today</span>
+            <h2 class="cta-title">Ready to Supercharge Your Creative Velocity?</h2>
+            <p class="cta-subtitle">
+              Join over 50,000 visionary designers, artists, and engineering teams pioneering spatial intelligence. Sign up now and receive 200 free credits.
+            </p>
+
+            <!-- Newsletter / Early Access Form -->
+            <form class="cta-form" id="newsletterForm" novalidate>
+              <div class="form-group">
+                <label for="newsletterEmail" class="sr-only">Enter your work email</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input type="email" id="newsletterEmail" class="form-input" placeholder="Enter your business email..." required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit" id="submitFormBtn">
+                  <span>Claim Early Access</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <p class="form-terms">
+                🔒 No credit card required • 14-day full feature trial • Instant account activation
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER SECTION
+       Multi-column semantic footer with brand statement, navigation
+       links, social links, legal notices, and live status beacon.
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#hero" class="brand-logo footer-logo">
+            <img src="assets/images/logo.svg" alt="PulseAI Logo" width="150" height="38">
+          </a>
+          <p class="footer-about">
+            PulseAI Studio is the premier spatial intelligence engine designed to bridge generative AI and 3D creative production for modern design teams.
+          </p>
+          <div class="system-status-badge">
+            <span class="status-pulse-dot"></span>
+            <span class="status-text">All systems operational (99.99%)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Product -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Spatial Canvas</a></li>
+            <li><a href="#workflow">Diffusion Engine</a></li>
+            <li><a href="#pricing">Multiplayer Sync</a></li>
+            <li><a href="#features">Figma Plugin</a></li>
+            <li><a href="#features">Blender Bridge</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">Documentation</a></li>
+            <li><a href="#faq">API Reference</a></li>
+            <li><a href="#workflow">Tutorial Videos</a></li>
+            <li><a href="#testimonials">Case Studies</a></li>
+            <li><a href="#faq">Community Forum</a></li>
+            <li><a href="#faq">Release Notes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Our Team</a></li>
+            <li><a href="#about">Careers <span class="hiring-badge">We're hiring</span></a></li>
+            <li><a href="#about">Press & Media Kit</a></li>
+            <li><a href="#about">Security & Trust</a></li>
+            <li><a href="#cta">Contact Sales</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Legal & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <p class="footer-sub-text">Stay updated with our weekly spatial engineering dispatches:</p>
+          <div class="social-icon-row">
+            <!-- Twitter/X -->
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Star us on GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Connect on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <!-- Discord -->
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Join our Discord community">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-legal-copy">
+          <p>&copy; <span id="currentYear">2026</span> PulseAI Studio Inc. All rights reserved. Built with semantic HTML5, CSS3 &amp; Vanilla JavaScript.</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#hero">Privacy Policy</a>
+          <a href="#hero">Terms of Service</a>
+          <a href="#hero">Security Architecture</a>
+          <a href="#hero" class="back-to-top-text" id="backToTopTextLink">Back to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       FLOATING BACK-TO-TOP BUTTON
+       Appears when the user scrolls down 350px.
+       ======================================================== -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ========================================================
+       INTERACTIVE DEMO PREVIEW MODAL
+       Accessible modal dialog for video/interactive walkthrough.
+       ======================================================== -->
+  <div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">PulseAI Studio Interactive Tour</h3>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal window">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-video-placeholder">
+          <div class="placeholder-graphic">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="#8B5CF6"/></svg>
+            <h4>PulseAI 2.5 Spatial Workflow Demo</h4>
+            <p>Live interactive preview showing node synthesis, 3D viewport navigation, and automated GLTF export.</p>
+            <button type="button" class="btn btn-primary btn-sm" id="modalSimulateBtn">Launch Interactive Simulation</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span>Press <kbd>ESC</kbd> or click outside to dismiss.</span>
+        <button type="button" class="btn btn-secondary btn-sm" id="modalDismissBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       TOAST NOTIFICATION CONTAINER
+       Displays feedback alerts for form submissions & events.
+       ======================================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Vanilla JavaScript Connection -->
+  <script src="js/script.js"></script>
+</body>
+</html>
